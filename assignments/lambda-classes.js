@@ -43,6 +43,19 @@ class Instructor extends Person {
     grade(student, subject){
         console.log(`${student.name} recieves a perfect score on ${subject}`);
     }
+
+    editGrade(student){
+        let placeHolder = student.grade;
+        
+        if (Math.random() > .50){
+            placeHolder = placeHolder + 10*Math.random()
+        } else {
+            placeHolder = placeHolder - 10*Math.random()
+        }
+        
+        student.grade = placeHolder;
+        
+    }
 }
 
 /* 
@@ -64,6 +77,7 @@ class Student extends Person {
         this.previousBackground = attr.previousBackground;
         this.className = attr.className;
         this.favSubjects = attr.favSubjects;
+        this.grade = attr.grade;
     }
     listsSubjects(){
         for (let i = 0; i<this.favSubjects.length; i++){
@@ -75,6 +89,13 @@ class Student extends Person {
     }
     sprintChallenge(subject){
         console.log(`${this.name} has begun sprint challenge on ${subject}` );
+    }
+    graduate(){
+        if (this.grade >=70) {
+            console.log (`Congrats on finishing Lambda School! Now go get a job.`)
+        } else {
+            console.log (`Keep coding, friend.`)
+        }
     }
 }
 
@@ -149,6 +170,7 @@ const dolores = new Student({
     catchPhrase: `That's what HE said`,
     className: 'web17',
     favSubjects: 'JavaScript',
+    grade: 78,
   });
 
 const holloway = new Student({
@@ -161,9 +183,10 @@ const holloway = new Student({
     catchPhrase: `Clear eyes, full hearts, can't lose.`,
     className: 'cs9',
     favSubjects: 'Python',
+    grade: 56,
 });
 
-const Angel = new Student({
+const angel = new Student({
     name: 'Angel',
     location: 'Binghampton',
     age: 28,
@@ -173,6 +196,7 @@ const Angel = new Student({
     catchPhrase: `Legendary!`,
     className: 'web17',
     favSubjects: 'JavaScript',
+    grade: 90,
 });
 
 /* ============ PROJECT MANAGER OBJECTS ============*/ 
@@ -214,6 +238,16 @@ const blanche = new ProjectManager({
 });
 
 
+/* ============ editGrade and graduate testing ============*/ 
+console.log(dolores.grade)
+
+fred.editGrade(dolores);
+
+console.log(dolores.grade)
+
+dolores.graduate();
+
+
 
 
   /*
@@ -228,3 +262,4 @@ Sean	Long
 Myrtle	Pena
 Julie	Bowen
 */
+
