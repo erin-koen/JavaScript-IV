@@ -100,6 +100,131 @@ class ProjectManager extends Instructor {
         console.log(`${this.name} announces to ${channel}, @channel standy times!`);
     }
     debugsCode(student, subject){
-        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
     }
 }
+
+
+/* ============ INSTRUCTOR OBJECTS ============*/  
+
+const fred = new Instructor({
+    name: 'Fred',
+    location: 'tulsa',
+    age: 122,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Don't forget the homies`
+  });
+
+  const wilma = new Instructor({
+    name: 'wilma',
+    location: 'madison',
+    age: 91,
+    gender: 'female',
+    favLanguage: 'Solidity',
+    specialty: 'back-end',
+    catchPhrase: `Hash is king`
+  });
+
+  const betty = new Instructor({
+    name: 'betty',
+    location: 'earlville',
+    age: 78,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Goin back to cali`
+  });
+
+/* ============ STUDENT OBJECTS ============*/  
+
+const dolores = new Student({
+    name: 'Dolores',
+    location: 'Utica',
+    age: 34,
+    gender: 'female',
+    favLanguage: 'English',
+    specialty: 'Front-end',
+    catchPhrase: `That's what HE said`,
+    className: 'web17',
+    favSubjects: 'JavaScript',
+  });
+
+const holloway = new Student({
+    name: 'Holloway',
+    location: 'Liverpool',
+    age: 20,
+    gender: 'female',
+    favLanguage: 'Spanglish',
+    specialty: 'back-end',
+    catchPhrase: `Clear eyes, full hearts, can't lose.`,
+    className: 'cs9',
+    favSubjects: 'Python',
+});
+
+const Angel = new Student({
+    name: 'Angel',
+    location: 'Binghampton',
+    age: 28,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Legendary!`,
+    className: 'web17',
+    favSubjects: 'JavaScript',
+});
+
+/* ============ PROJECT MANAGER OBJECTS ============*/ 
+
+const carr = new ProjectManager({
+    name: 'Carr',
+    location: 'Watertown',
+    age: 35,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `I love it when a plan comes together`,
+    gradClassName: 'web3',
+    favInstructor: 'Fred',
+});
+
+const blanche = new ProjectManager({
+    name: 'Blance',
+    location: 'Cazenovia',
+    age: 91,
+    gender: 'female',
+    favLanguage: 'CSS',
+    specialty: 'back-end',
+    catchPhrase: `Eat my shorts`,
+    gradClassName: 'android9',
+    favInstructor: 'Barney',
+});
+
+ const alton = new ProjectManager({
+    name: 'Alton',
+    location: 'Sherburne',
+    age: 78,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Whatchu talkin' bout, Willis?`,
+    gradClassName: 'iOS4',
+    favInstructor: 'Wilma',
+});
+
+
+
+
+  /*
+  Random names
+	Carr
+Blanche	Mclaughlin
+Alton	Page
+Byron	Byrd
+Joe	Perry
+Susie	Holmes
+Sean	Long
+Myrtle	Pena
+Julie	Bowen
+*/
