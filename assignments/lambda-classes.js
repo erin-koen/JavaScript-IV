@@ -77,3 +77,29 @@ class Student extends Person {
         console.log(`${this.name} has begun sprint challenge on ${subject}` );
     }
 }
+
+/*
+
+Now that we have instructors and students, we'd be nowhere without our PM's.
+ProjectManagers are extensions of Instructors.
+ProjectManagers have the following uniqe props:
+* `gradClassName`: i.e. CS1
+* `favInstructor`: i.e. Sean
+ProjectManangers have the following Methods:
+* `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
+* `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
+
+*/
+class ProjectManager extends Instructors {
+    constructor(attr){
+        super(attr);
+        this.gradClassName = attr.gradClassName;
+        this.favInstructor = attr.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+    }
+    debugsCode(student, subject)
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+    }
+}
