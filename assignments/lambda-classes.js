@@ -80,9 +80,10 @@ class Student extends Person {
         this.grade = attr.grade;
     }
     listsSubjects(){
-        for (let i = 0; i<this.favSubjects.length; i++){
-            console.log(this.favSubjects[i]);
-        }
+        this.favSubjects.forEach(element => console.log(element));
+        // for (let i = 0; i<this.favSubjects.length; i++){
+        //     console.log(this.favSubjects[i]);
+        // }
     }
     PRAssignment(subject){
         console.log(`${this.name} has submitted a PR for ${subject}` );
@@ -169,7 +170,7 @@ const dolores = new Student({
     specialty: 'Front-end',
     catchPhrase: `That's what HE said`,
     className: 'web17',
-    favSubjects: 'JavaScript',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
     grade: 78,
   });
 
@@ -182,7 +183,7 @@ const holloway = new Student({
     specialty: 'back-end',
     catchPhrase: `Clear eyes, full hearts, can't lose.`,
     className: 'cs9',
-    favSubjects: 'Python',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
     grade: 56,
 });
 
@@ -195,7 +196,7 @@ const angel = new Student({
     specialty: 'Front-end',
     catchPhrase: `Legendary!`,
     className: 'web17',
-    favSubjects: 'JavaScript',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
     grade: 90,
 });
 
@@ -246,7 +247,7 @@ fred.editGrade(dolores);
 console.log(dolores.grade)
 
 dolores.graduate();
-
+dolores.listsSubjects();
 
 
 
